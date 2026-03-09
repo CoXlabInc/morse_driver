@@ -11,3 +11,5 @@ output
 *.diff
 *.patch
 coverity/
+modules.order
+Module.symvers

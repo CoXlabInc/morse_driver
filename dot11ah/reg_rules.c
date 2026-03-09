@@ -107,18 +107,24 @@ struct morse_reg_rule kr_reg_rules[] = {
 	_MRR_KHZ(919500, 923500, 4000, 0,  4, AUTO_BW, 10000, 10000, false, 0, 4000000, 50000),
 
 	/* S1G->11ac Mapped Frequencies (Mirrored from 1.16.4 Actual Frequencies with BW Masquerading) */
-	/* 1MHz S1G -> 20MHz Mapped (High Band 926-927) - EIRP 17dBm */
-	_MRR(5910, 5930,  20, 0, 17, AUTO_BW, 10000, 10000, false, 0, 220000, 264),
+	/* 1MHz S1G -> 20MHz Mapped (Low Band 1) - EIRP 4dBm */
+	_MRR(5650, 5690,  20, 0,  4, AUTO_BW, 10000, 10000, false, 0, 4000000, 50000),
+	_MRR(5170, 5210,  20, 0,  4, AUTO_BW, 10000, 10000, false, 0, 4000000, 50000),
+	/* 1MHz S1G -> 20MHz Mapped (Low Band 2) - EIRP 10dBm */
+	_MRR(5210, 5250,  20, 0, 10, AUTO_BW, 10000, 10000, false, 0, 4000000, 50000),
+	/* 1MHz S1G -> 20MHz Mapped (High Band) - EIRP 17dBm */
+	_MRR(5735, 5815,  20, 0, 17, AUTO_BW, 10000, 10000, false, 0, 220000, 264),
+
 	/* 2MHz S1G -> 40MHz Mapped (Low Band 1) - EIRP 4dBm */
-	_MRR(5740, 5780,  40, 0,  4, AUTO_BW, 10000, 10000, false, 0, 4000000, 50000),
+	_MRR(5650, 5690,  40, 0,  4, AUTO_BW, 10000, 10000, false, 0, 4000000, 50000),
+	_MRR(5170, 5210,  40, 0,  4, AUTO_BW, 10000, 10000, false, 0, 4000000, 50000),
 	/* 2MHz S1G -> 40MHz Mapped (Low Band 2) - EIRP 10dBm */
-	_MRR(5820, 5860,  40, 0, 10, AUTO_BW, 10000, 10000, false, 0, 4000000, 50000),
-	/* 2MHz S1G -> 40MHz Mapped (High Band 1) - EIRP 20dBm */
-	_MRR(5910, 5950,  40, 0, 20, AUTO_BW, 10000, 10000, false, 0, 220000, 264),
-	/* 2MHz S1G -> 40MHz Mapped (High Band 2) - EIRP 20dBm */
-	_MRR(5950, 6000,  40, 0, 20, AUTO_BW, 10000, 10000, false, 0, 220000, 264),
+	_MRR(5210, 5250,  40, 0, 10, AUTO_BW, 10000, 10000, false, 0, 4000000, 50000),
+	/* 2MHz S1G -> 40MHz Mapped (High Band) - EIRP 20dBm */
+	_MRR(5735, 5815,  40, 0, 20, AUTO_BW, 10000, 10000, false, 0, 220000, 264),
+
 	/* 4MHz S1G -> 80MHz Mapped (Low Band) - EIRP 4dBm */
-	_MRR(5780, 5860,  80, 0,  4, AUTO_BW, 10000, 10000, false, 0, 4000000, 50000),
+	_MRR(5170, 5250,  80, 0,  4, AUTO_BW, 10000, 10000, false, 0, 4000000, 50000),
 };
 
 static struct morse_regdomain mors_kr_regdom = {
